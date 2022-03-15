@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 project_slug = "mcman-index"
-module_name = project_slug.replace('-', "_")
+module_name = project_slug.replace("-", "_")
 
 setup(
     name=project_slug,
@@ -16,9 +16,14 @@ setup(
     description="Helps with indexing minecraft mods",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=find_packages(),install_requires=[],
+    packages=find_packages(),
+    install_requires=[
+        "tealprint",
+    ],
     classifiers=[
-        "Development Status :: 2 - Pre-Alpha","Topic :: Software Development :: Libraries","License :: OSI Approved :: MIT License",
+        "Development Status :: 2 - Pre-Alpha",
+        "Environment :: Console",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
