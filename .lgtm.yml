@@ -4,5 +4,5 @@ extraction:
       version: 3
 
 queries:
-  - include: '*'
-  - exclude: 'py/uninitialized-local-variable'
+  - Include: '*'
+  - Exclude: 'py/uninitialized-local-variable'
