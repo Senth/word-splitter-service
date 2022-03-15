@@ -1,9 +1,14 @@
+import splitter
+
 from .config import config
 
 
 def main():
     # Your program
-    pass
+    print(config.app_name)
+
+    words = splitter.split("entityculling")
+    print(words)
 
 
 if __name__ == "__main__":

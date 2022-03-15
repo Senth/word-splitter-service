@@ -1,6 +1,4 @@
-from tealprint import TealLevel
-
-from .utils.config_file_args import ConfigFileArgs
+from tealprint import TealConfig, TealLevel
 
 _app_name = "mcman-index"
 
@@ -9,7 +7,7 @@ class Config:
     def __init__(self):
         # Default values
         self.app_name: str = _app_name
-        self.level = TealLevel.info
+        TealConfig.level = TealLevel.info
 
     def set_from_cli(self, args):
         """Set additional configuration from script arguments
@@ -18,6 +16,9 @@ class Config:
             args (list): All the parsed arguments
         """
         if args.debug:
-            self.level = TealLevel.debug
+            TealConfig.level = TealLevel.debug
         elif args.verbose:
-            self.level = TealLevel.verboseconfig = Config()
+            TealConfig.level = TealLevel.verbose
+
+
+config = Config()

@@ -19,6 +19,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "tealprint",
+        "compound-word-splitter",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
