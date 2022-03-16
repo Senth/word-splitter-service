@@ -1,6 +1,6 @@
 # Wordsplitter Service
 
-Helps with indexing minecraft mods
+A Docker service for [compound-word-splitter](https://github.com/TimKam/compound-word-splitter).
 
 ## Authors
 
