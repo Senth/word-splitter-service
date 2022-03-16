@@ -1,0 +1,9 @@
+tealprint
+compound-word-splitter
+pyenchant
+click
+Flask
+itsdangerous
+MarkupSafe
+uWSGI
+Werkzeug

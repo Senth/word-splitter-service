@@ -1,3 +1,4 @@
-tealprint
-compound-word-splitter
-pyenchant
+compound-word-splitter==0.4
+Flask==2.0.3
+uWSGI==2.0.20
+pyenchant==3.2.2

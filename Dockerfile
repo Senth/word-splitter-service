@@ -2,12 +2,22 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+RUN apt-get clean \
+  && apt-get -y update
 
-RUN apt-get update && apt-get install -y python3-enchant
+RUN  apt-get -y install python3-enchant \
+  && apt-get -y install python3-dev \
+  && apt-get -y install build-essential \
+  && apt-get -y install nginx
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade pip
 
 COPY . .
 
-CMD [ "python3", "-m", "mcmanindex"]
+RUN pip3 install -r requirements.txt
+
+COPY nginx.conf /etc/nginx
+
+RUN chmod +x ./start.sh
+
+CMD ["./start.sh"]
