@@ -4,6 +4,6 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/split")
-def split():
-    return " ".join(splitter.split("entityculling"))
+@app.route("/<word>")
+def split(word: str):
+    return " ".join(splitter.split(word))
