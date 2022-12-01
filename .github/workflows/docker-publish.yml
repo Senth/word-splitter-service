@@ -48,7 +48,7 @@ jobs:
       # https://github.com/docker/login-action
       - name: Log into DockerHub
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@21f251affc0769ccac8a1cf17e937592fb492337
+        uses: docker/login-action@f75d088332b07a08afadf6ac53c74509b9453f12
         with:
           username: senthwallace
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
